@@ -1,11 +1,18 @@
 #include <gtest/gtest.h>
 #include "quicksort.h"
 
+TEST(qs, choose_pivot_1) {
+  unsigned int test1[] = {3,2,1};
+
+  EXPECT_EQ(choose_pivot(test1,0,2), 2);
+
+}
+
 TEST(qs, select_1) {
 
   unsigned int test1[] = {3,2,1};
   unsigned int val = select(test1,0,2);
-  EXPECT_EQ(val, 0);
+  EXPECT_EQ(val, 1);
 
 }
 
@@ -21,7 +28,7 @@ TEST(qs, select_3) {
 
   unsigned int test1[] = {2,1,3};
   unsigned int val = select(test1,0,2);
-  EXPECT_EQ(val, 2);
+  EXPECT_EQ(val, 1);
 
 }
 
